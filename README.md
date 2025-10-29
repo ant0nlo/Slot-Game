@@ -1,6 +1,6 @@
 # Slot Machine Simulation
 
-A modular, SOLID-compliant slot machine simulation built entirely in **TypeScript**.  
+A modular, slot machine simulation built entirely in **TypeScript**.  
 Implements clean architecture principles — separation of concerns, dependency injection, and interface-based abstractions for full testability and maintainability.
 
 
