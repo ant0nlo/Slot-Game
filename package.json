@@ -1,0 +1,28 @@
+{
+  "name": "slotgame",
+  "version": "1.0.0",
+  "description": "A TypeScript slot machine simulation with SOLID architecture",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "simulate": "ts-node src/simulate.ts",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "keywords": [
+    "typescript",
+    "slot-machine",
+    "solid",
+    "oop",
+    "simulation"
+  ],
+  "author": "Antonio Penev",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
