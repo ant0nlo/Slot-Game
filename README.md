@@ -29,8 +29,14 @@ Defines abstraction contracts between modules for loose coupling and testability
 - **`IPayoutEvaluator.ts`** – interface for payout calculation logic.  
 - **`ISlotMachine.ts`** – interface for the slot machine controller.  
 - **`types.ts`** – shared types (`Line`, `SpinResult`, `SymbolId`, etc.).
-
 This layer ensures **abstraction, flexibility, and easy testing**.
+
+### **Validation (`src/validation/`)**
+- **`configSchema.ts`** – validates the game configuration at runtime using **Zod**.  
+- Ensures all reels, lines, and symbol definitions are correctly structured before execution.
+
+### **Utils (`src/utils/`)**
+- **`errorHandler.ts`** – provides centralized error handling and formatted logging.  
 
 ### **Tests (`tests/`)**
 Contains unit and integration tests for every Core class:
@@ -49,7 +55,7 @@ Contains unit and integration tests for every Core class:
 - TypeScript **v5+**
 - Jest **v29+**
 - ts-node **v10+**
-
+- Zod **v3+**
 
 ## Configuration
 The project uses standard TypeScript and Jest setup:
@@ -111,7 +117,6 @@ Average win per spin: 3.39
 Execution time: 0.036s
 ```
 
-
 ## Testing
 
 The project uses **Jest** and **ts-jest** for full unit and integration test coverage.
@@ -135,4 +140,9 @@ src/core/PayoutEvaluator.ts  | 95      | 90        | 100      | 95      |
 src/core/SlotMachine.ts      | 100     | 100       | 100      | 100     |
 All files                    | 98      | 96        | 100      | 98      |
 ```
+
+## Continuous Integration (GitHub Actions)
+
+The repository includes a CI pipeline located in `.github/workflows/test.yml`.
+It automatically runs on every push or pull request to validate the project’s integrity.
 
